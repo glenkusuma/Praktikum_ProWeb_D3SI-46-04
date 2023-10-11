@@ -1,0 +1,5 @@
+1:hallo dunia
+2:mari kita belajar
+3:php basic
+user:$2y$10$HyJajow01de/YBIkobihb.QooolDfiKgTdpIfvbFZfTG9Pk8NnFIO
+username:password
