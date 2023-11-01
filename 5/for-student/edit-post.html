@@ -68,25 +68,27 @@
 </style>
 <body>
     <div class="container">
-        <h1>Edit Pos #<?= $data->id ?></h1>
+        <h1>Edit Pos # <!--echo id --> </h1> 
+        <!-- Menampilkan error jika ada -->
         <?= isset($error) ? "<h4 id='error'>Error: $error</h4>" : "" ?>
-        <form method="post" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>">
-            <input type="hidden" name="id" value="<?= $data->id ?>"> <!-- Tambahkan field tersembunyi untuk mengirimkan ID pos -->
+
+        <form method="post" action="          "> <!-- echo PHP_SELF -->
+            <input type="hidden" name="id" value=""> <!--echo id --> <!-- Tambahkan field tersembunyi untuk mengirimkan ID pos -->
 
             <label for="title">Judul:</label>
-            <input type="text" name="title" id="title" value="<?= $data->title ?>" required>
+            <input type="text" name="title" id="title" value="        " required> <!--echo title -->
 
             <label for="subtitle">Subjudul:</label>
-            <input type="text" name="subtitle" id="subtitle" required value="<?= $data->subtitle ?>">
+            <input type="text" name="subtitle" id="subtitle" required value="        "> <!--echo subtitle -->
 
             <label for="slug">Slug:</label>
-            <input type="text" name="slug" id="slug" required value="<?= $data->slug ?>">
+            <input type="text" name="slug" id="slug" required value="        "> <!--echo slug -->
 
-            <label for="image">Gambar (URL):</label>
-            <input type="url" name="image" id="image" placeholder="https://picsum.photos/1200/300" value="<?= $data->image ?>" required>
+            <label for="image">Gambar (URL):</label> <!--echo title -->
+            <input type="url" name="image" id="image" placeholder="https://picsum.photos/1200/300" value="        " required> <!--echo image -->
 
             <h3>Editor Markdown</h3>
-            <textarea id="content" cols="66" rows="15" name="content" placeholder="Hello World!"><?= $data->content ?></textarea><br>
+            <textarea id="content" cols="66" rows="15" name="content" placeholder="Hello World!"> <!--echo content -->  </textarea><br>
 
             <a href="index.php"><button type="button" name="cancel">Batal</button></a>
             <button type="submit">Perbarui Pos</button>

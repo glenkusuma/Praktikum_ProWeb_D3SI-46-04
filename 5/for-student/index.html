@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+    <style>
+        table {
+            border-collapse: collapse; 
+            margin: 20px auto; 
+        }
+        th, td {
+            border: 1px solid #ccc; 
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 1536px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .button {
+            color: white;
+            padding: 4px 10px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin: 2px 4px;
+        }
+
+        .button:hover {
+            filter: brightness(120%);
+            cursor: pointer;
+        }
+
+        /* style untuk tombol "Buat Post" */
+        .create-btn {
+            background-color: #008CBA; 
+            padding: 8px 20px;
+        }
+
+        /* style untuk wadah aksi (tombol "view" dan "edit") */
+        .action-buttons {
+            display: flex;
+            text-align: center;
+            margin: 5px;
+        }
+
+        /* Gaya tombol "Edit" */
+        .edit-btn {
+            background-color: #008CBA;
+        }
+
+        .no-padding {
+            padding: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Posts</h1>
+
+        <!-- Tombol "Buat Post" -->
+        <a class="button create-btn" href="create-post.php">Buat Post</a>
+
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Judul</th>
+                <th>Subjudul</th>
+                <th>Slug</th>
+                <th>Gambar</th>
+                <th>Konten</th>
+                <th>created_at</th>
+                <th>updated_at</th>
+                <th>Action</th>
+            </tr>
+            <!-- Looping melalui data post dan menampilkannya dalam tabel. -->
+                <!-- mulai looping foreach -->
+                <tr>
+                    <td><!--id--></td> 
+                    <td><!--Judul--></td> 
+                    <td><!--Subjudul--></td> 
+                    <td><!--Slug--></td>
+                    <td class="no-padding"><img src="" alt="Post Image" width="200"></td> <!--src Gambar--> <!--tambahkan gambar post-->
+                    <!-- Menggunakan operasi ternary (kondisional) untuk membatasi panjang konten dan menambahkan
+                    "..." jika melebihi panjang maksimum. -->
+                    <td><!--Konten--></td> 
+                    <td><!--created_at--></td> 
+                    <td><!--updated_at--></td> 
+                    <!--Action-->
+                    <td class="no-padding"> 
+                        <div class="action-buttons">
+                            <a class="button edit-btn" href="edit-post.php?id=               ">Edit</a> <!--tambahkan id post-->
+                        </div>
+                    </td>
+                </tr>
+            <!-- berhentikan looping foreach -->
+        </table>
+    </div>
+</body>
+</html>

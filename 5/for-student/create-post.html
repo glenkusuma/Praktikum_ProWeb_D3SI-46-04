@@ -68,22 +68,24 @@
 <body>
     <div class="container">
         <h1>Buat Post Baru</h1>
+        <!-- Menampilkan error jika ada -->
         <?=isset($error) ? "<h4 id='error'>Error: $error</h4>" : ""?>
-        <form method="post" action="<?php htmlentities($_SERVER['PHP_SELF'])?>">
+
+        <form method="post" action="         "> <!-- echo PHP_SELF -->
             <label for="title">Judul:</label>
-            <input type="text" name="title" id="title" value="<?= isset($data) ? $data->title  : "" ?>" required>
+            <input type="text" name="title" id="title" value="             " required>  <!-- Jika $data ada ? echo title  : echo "" -->
 
             <label for="subtitle">Subjudul:</label>
-            <input type="text" name="subtitle" id="subtitle" value="<?= isset($data) ? $data->subtitle  : "" ?>" required>
+            <input type="text" name="subtitle" id="subtitle" value="             " required> <!-- Jika $data ada ? echo subtitle  : echo "" -->
 
             <label for="slug">Slug:</label>
-            <input type="text" name="slug" id="slug" value="<?= isset($data) ? $data->slug  : "" ?>" required>
+            <input type="text" name="slug" id="slug" value="             " required> <!-- Jika $data ada ? echo slug  : echo "" -->
 
             <label for="image">Gambar (URL):</label>
-            <input type="url" name="image" id="image" placeholder="https://picsum.photos/1200/300" value="<?= isset($data) ? $data->image  : "https://picsum.photos/1200/300" ?>" required>
+            <input type="url" name="image" id="image" placeholder="https://picsum.photos/1200/300" value="<?= isset($data) ? $data->image  : "https://picsum.photos/1200/300" ?>" required> <!-- Jika $data ada ? echo gambar  : echo "https://picsum.photos/1200/300" -->
 
             <h3>Editor Markdown</h3>
-            <textarea id="content" cols="66" rows="15" name="content" placeholder="Hello World!"><?= isset($data) ? $data->content  : "" ?></textarea><br>
+            <textarea id="content" cols="66" rows="15" name="content" placeholder="Hello World!">   <!-- Jika $data ada ? echo content  : echo "" -->   </textarea><br> 
 
             <a href="index.php"><button type="button" name="cancel">Batal</button></a>
             <button type="submit">Buat Post</button>
