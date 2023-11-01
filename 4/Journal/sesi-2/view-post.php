@@ -6,12 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $post_slug = $_GET['slug'];
 }
 
-$Parsedown = new Parsedown();
 $Post = new Post();
 
 $data = $Post->getPostBySlug($post_slug);
 
-$content = $Parsedown->text($data->content);
+$content = Parsedown::instance()->setBreaksEnabled(true)->text($data->content);
 ?>
 
 <!DOCTYPE html>

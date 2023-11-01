@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) ."/include/Post.php"; // Include the Post class
+require_once dirname(__FILE__) ."/Include/Post.php"; // Include the Post class
 
 // Handle the form submission to create a new blog post
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
