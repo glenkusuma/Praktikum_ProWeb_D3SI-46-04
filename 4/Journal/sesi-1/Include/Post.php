@@ -9,7 +9,7 @@ class Post extends Database
     /**
      * Mengambil semua data pos dari tabel "posts".
      *
-     * @return array|false[] Data pos yang ditemukan dalam bentuk array.
+     * @return array<object>|false[] Data pos yang ditemukan dalam bentuk array.
      */
     public function getAllPosts()
     {

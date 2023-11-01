@@ -1,5 +1,5 @@
 <?php
-require_once "./include/Post.php";
+require_once dirname(__FILE__) ."/Include/Post.php";
 
 // Membuat instance(object) Post baru
 $post = new Post();
